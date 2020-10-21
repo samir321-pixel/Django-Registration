@@ -9,6 +9,11 @@ First, clone the repository to your local machine:
 git clone git@github.com:samir321-pixel/Django-Registration.git
 ```
 
+## Install Requirements:
+
+```bash
+pip install -r requirements.txt
+```
 ## Apply the migrations:
 
 ```bash
