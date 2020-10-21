@@ -1,0 +1,44 @@
+{% extends 'website/base.html' %}
+
+
+{% block body %}
+  {% csrf_token %}
+    <form method="post">
+        <div class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input class="btn btn-primary" type="submit" value="Register">
+        </div>
+    </form>
+
+{% endblock %}
+
+
+{% extends 'website/base.html' %}
+
+
+{% block body %}
+    {% csrf_token %}
+    <form method="post">
+        <div class="form-group">
+            {% csrf_token %}
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Register Here</div>
+                    <div class="panel-body">
+                        <div class="form-group clearfix">
+                            <label for="username" class="col-md-2 control-label text-right">Username:</label>
+                            {{ form.username }}
+
+                    </div>
+                        <label for="username" class="col-md-2 control-label text-right">Username:</label>
+                            {{ form.username }}
+                        </div>
+                </div>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Register">
+        </div>
+    </form>
+
+{% endblock %}

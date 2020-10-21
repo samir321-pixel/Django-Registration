@@ -1,0 +1,11 @@
+{% extends "website/base.html" %}
+
+
+{% block body %}
+    {% csrf_token %}
+    <div class="alert alert-primary" role="alert">
+        Registration is Successful
+    </div>
+    <a class="btn btn-primary btn-lg" href="{% url 'login' %}">You can Successfully Login Here</a>
+
+{% endblock %}

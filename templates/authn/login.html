@@ -1,0 +1,62 @@
+{% extends "website/base.html" %}
+
+
+{% block body %}
+    <title>Login</title>
+     <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page"><h3>Login Here</h3></li>
+                </ol>
+            </nav>
+    <div id="content-main">
+        {% if form.errors and not form.non_field_errors %}
+            <p class="errornote">
+                {% if form.errors.items|length == 1 %}
+                    <p>Please correct the error below.</p>
+                {% else %}
+                    <p>Please correct the errors below.</p>
+                {% endif %}
+            </p>
+        {% endif %}
+
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p class="errornote">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        {% endif %}
+
+
+
+        <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+            <div class="form-group">
+                {{ form.username.errors }}
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                {{ form.password.errors }}
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                <input type="hidden" name="next" value="{{ next }}">
+            </div>
+            {% url 'admin_password_reset' as password_reset_url %}
+            {% if password_reset_url %}
+                <div class="password-reset-link">
+                    <a href="{{ password_reset_url }}">Forgotten your password or username?</a>
+                </div>
+            {% endif %}
+            <div class="submit-row">
+                <input class="btn btn-primary" type="submit" value="Log in">
+            </div>
+            <br/>
+           <!-- <a class="btn btn-primary" href="{% url 'password_reset' %}">Forgot password?</a>-->
+            <a class="btn btn-primary" href="{% url 'register' %}">Register</a>
+        </form>
+
+
+    </div>
+
+
+{% endblock %}

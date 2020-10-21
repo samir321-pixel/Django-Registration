@@ -1,0 +1,19 @@
+{% extends "website/base.html" %}
+
+{% block body %}
+    <title>Home</title>
+    <div class="jumbotron">
+        <h1 class="display-4">Hello!</h1>
+        <p class="lead">Django-registration is an extensible application providing user registration functionality for
+            Django-powered Web sites.</p>
+        <hr class="my-2">
+        <p>We are using One-phase registration, where a user signs up and is immediately active and logged in.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Create Account</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Login</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'logout' %}">Logout</a>
+        </p>
+    </div>
+    <!-- Example row of columns -->
+
+{% endblock %}

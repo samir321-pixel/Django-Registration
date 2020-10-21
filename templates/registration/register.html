@@ -1,0 +1,53 @@
+{% extends 'website/base.html' %}
+
+
+{% block body %}
+     <title>Create Account</title>
+    {% csrf_token %}
+    <form method="post">
+        <div class="form-group">
+            {% csrf_token %}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page"><h3>Register Here</h3></li>
+                </ol>
+            </nav>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-group clearfix">
+                            <label for="username" class="col-md-2 control-label text-right">Username:</label>
+                            {{ form.username }}
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="first_name" class="col-md-2 control-label text-right">First Name:</label>
+                            {{ form.first_name }}
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="last_name" class="col-md-2 control-label text-right">Last Name:</label>
+                            {{ form.last_name }}
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="email" class="col-md-2 control-label text-right">Email:</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="password" class="col-md-2 control-label text-right">Password:</label>
+                            {{ form.password }}
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="password_confirm" class="col-md-2 control-label text-right">Confirm
+                                Password:</label>
+                            {{ form.password_confirm }}
+                        </div>
+
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Register">
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+{% endblock %}
