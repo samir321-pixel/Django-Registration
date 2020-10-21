@@ -12,6 +12,12 @@ git clone git@github.com:samir321-pixel/Django-Registration.git
 ## Apply the migrations:
 
 ```bash
+pip install -r requirements.txt
+```
+
+## Apply the migrations:
+
+```bash
 python manage.py migrate
 ```
 ## Create Superuser:
