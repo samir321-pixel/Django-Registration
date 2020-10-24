@@ -20,7 +20,7 @@
 <img height="64px" width="auto" src="https://www.drupal.org/files/project-images/bootstrap-stack.png">
 <img height="64px" width="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png">
 <img height="64px" width="auto" src="https://twilio-cms-prod.s3.amazonaws.com/images/django-dark.width-808.png">
-
+<img height="64px" width="auto" src="https://www.theguardian.com/games/2020/mar/17/25-best-online-video-games-coronavirus-self-isolating#img-1">
 <div/>
 
 <br/>
